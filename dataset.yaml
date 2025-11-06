@@ -1,0 +1,19 @@
+# Dataset configuration file for YOLOv8
+
+# Define the absolute path to your 'output' directory
+# Or use a relative path from where you run the 'train.py' script
+# '..' means "go up one directory"
+# This assumes your 'output' folder is at the same level as 'train.py'
+path: ./output  # Path to your generated 'output' folder
+
+# Train/val/test image directories
+train: images/train/
+val: images/val/
+
+# --- Classes ---
+# Number of classes
+nc: 1
+
+# Class names
+names:
+  - marker
