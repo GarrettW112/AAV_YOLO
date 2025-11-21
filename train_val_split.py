@@ -7,7 +7,7 @@ import shutil
 DATA_PATH = "output/"
 IMAGE_PATH = os.path.join(DATA_PATH, "images/")
 LABEL_PATH = os.path.join(DATA_PATH, "labels/")
-VAL_SPLIT_PERCENT = 0.20  # 20% of the data will be used for validation
+VAL_SPLIT_PERCENT = 0.20
 
 
 def create_split():
@@ -36,12 +36,12 @@ def create_split():
     val_images = all_images[:split_index]
     train_images = all_images[split_index:]
 
-    # Function to move files
+    # Move files
     def move_files(file_list, img_dest_dir, label_dest_dir):
         moved_count = 0
         for img_path in file_list:
             try:
-                # Get the base filename (e.g., "marker_synth_00001")
+                # Get the base filename
                 base_filename = os.path.basename(img_path)
                 file_root, _ = os.path.splitext(base_filename)
                 

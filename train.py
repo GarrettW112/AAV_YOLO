@@ -11,7 +11,12 @@ def main():
             imgsz=640,
             batch=32,
             name='yolov8n_custom',
-            device=0   # For GPU
+            device=0,      # For GPU
+
+            augment=True,  # Master switch to turn on augmentations
+            hsv_h=0.015,   # Hue (color)
+            hsv_s=0.7,     # Saturation (color richness)
+            hsv_v=0.4      # Value (brightness/contrast)
         )
         print("Training complete.")
         print(f"Model and results saved to: {results.save_dir}")
