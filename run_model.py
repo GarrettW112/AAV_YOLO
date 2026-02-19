@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # Config
-MODEL_PATH = "runs/detect/yolov8n_marker_model3/weights/best.pt"
+MODEL_PATH = "runs/detect/yolov8n_custom/weights/best.pt"
 
 # Confidence threshold
 CONF_THRESHOLD = 0.50
